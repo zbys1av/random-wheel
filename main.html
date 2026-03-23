@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wheel of Destiny</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="spin-container">
+        <div class="input-options">
+                <div id="optionsList"></div>
+        </div>
+        <div class="wheel-section">
+            <canvas id="wheelCanvas" width="400" height="400"></canvas>
+            <br>
+            <button class="btn" onclick="spinWheel()" id="spinBtn">Spin</button>
+            <div id="result"></div>
+        </div>
+        <div class="input-container">
+            <div class="input-section">
+                <div class="input-section-add">
+                    <input class="input-field" type="text" id="optionInput" placeholder="Add option..." />
+                    <button class="btn" onclick="addOption()">Add</button>
+                </div>
+                <div class="input-section-duration">
+                    <label for="spinDurationInput">Spin Duration:</label>
+                    <input class="input-field" type="number" id="spinDurationInput" value="10"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="btn" id="downloadBtn">Download List</button>
+    <input type="file" id="loadFile" accept=".txt" style="display: none;" />
+    <button class="btn" onclick="document.getElementById('loadFile').click()">Load List</button>
+    <button class="btn" id="clearBtn">Clear List</button>
+    <button class="btn" id="setBackgroundBtn">Set Background Image</button>
+    <button class="btn" id="resetBackgroundBtn">Reset Background</button>
+    <script src="main.js"></script>
+</body>
+</html>
