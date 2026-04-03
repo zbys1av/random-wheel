@@ -15,7 +15,7 @@ let spinVelocity = 0;
 let editMode = true;  // Start in edit mode
 
 function generateRandomColor() {
-    const h = Math.floor(Math.random() * 26) + 40;  // 40-65
+    const h = Math.floor(Math.random() * 70) + 250;  // 250-320
     const s = Math.floor(Math.random() * 41) + 50;  // 50-90
     const l = Math.floor(Math.random() * 61) + 20;  // 20-80
     return `hsl(${h}, ${s}%, ${l}%)`;
@@ -60,7 +60,7 @@ function drawWheel() {
         ctx.translate(centerX, centerY);
         ctx.rotate(angle + arc / 2);
         ctx.textAlign = "right";
-        ctx.fillStyle = "#222";
+        ctx.fillStyle = "#141414";
         ctx.font = "18px Arial";
         ctx.fillText(options[i].name, radius - 10, 10);  // Removed percentage from wheel
         ctx.restore();
@@ -68,11 +68,11 @@ function drawWheel() {
     }
     // Draw pointer
     ctx.beginPath();
-    ctx.moveTo(centerX, centerY + radius - 10);
-    ctx.lineTo(centerX + 15, centerY + radius + 20);
-    ctx.lineTo(centerX - 15, centerY + radius + 20);
+    ctx.moveTo(centerX, centerY + radius - 13);
+    ctx.lineTo(centerX + 10, centerY + radius + 8);
+    ctx.lineTo(centerX - 10, centerY + radius + 8);
     ctx.closePath();
-    ctx.fillStyle = "#222";
+    ctx.fillStyle = "#000000";
     ctx.fill();
 }
 
